@@ -141,7 +141,7 @@ async function filterPhoto () {
 function showMenu () {
     const navMenu = document.getElementById("navMenu");
     // const menuHamburger = document.getElementById("menuHamburger");
-    navMenu.classList.toggle("sfhow-menu");
+    navMenu.classList.toggle("show-menu");
     // menuHamburger.classList.toggle("open-menu");
 }
 
