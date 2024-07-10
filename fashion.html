@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ASerenity in Nature: A Photographic Journey</title>
+  <link rel="canonical" href="https://uats.site/travel.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ASerenity in Nature: A Photographic Journey" />
+  <meta property="og:description" content="This is a collection of visual content organized and presented in a structured manner, typically within a digital environment such as a website or application." />
+  <meta property="og:url" content="https://uats.site/" />
+  <meta property="og:site_name" content="Image Gallery" />
+  <meta property="og:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
+  <meta name="twitter:title" content="ASerenity in Nature: A Photographic Journey" />
+  <meta name="twitter:description" content="This is a collection of visual content organized and presented in a structured manner, typically within a digital environment such as a website or application." />
+  <meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
+  <link rel="stylesheet" href="assets/css/main.css?v=1.0.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.0.4">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer> </script>
+  <style>
+    .hero-section {
+      background-image: url("https://uats.site/assets/images/bg/food_hero.jpg?auto=format%2Ccompress");
+      height: 250px;
+      background-size: 100%;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div><img class="logo" src="assets/images/logos/main-logo.png" alt="" srcset=""></div>
+  <nav class="desktop-nav" id="navMenu">
+    <a href="index.html">Pets</a>
+    <a href="food.html">Food</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="travel.html">Travel</a>
+    <a href="cars.html">Cars</a>
+    <a class="active" href="fashion.html">Fashion</a>
+    <a href="sports.html">Sports</a>
+  </nav>
+  <span class="menu-wrapper" onclick="showMenu()">
+          <img class="menu" src="assets/images/svg/menu.svg">
+      </span>
+</header>
+<main>
+  <section id="loaderWrapper">
+    <div id="loader-wrapper" class="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+
+    </div>
+  </section>
+  <section class="hero-section">
+    <div class="search-wrapper">
+      <input type="text" name="photo" id="photo" class="search-box" placeholder="Enter name... ">
+      <span class="search-icon inline-block" onclick="filterPhoto()"></span>
+    </div>
+  </section>
+  <section class="gallery-section">
+    <h1 class="title">Food</h1>
+    <div class="gallery-wrapper" id="galleryWrapper">
+    </div>
+  </section>
+  <section class="pagination-section">
+    <div class="pagination">
+      <a id="prev" href="#">&laquo;</a>
+      <a id="page1" href="fashion.html?page=1">1</a>
+      <a id="page2" href="fashion.html?page=2">2</a>
+      <a  href="fashion.html?page=2" id="next">&raquo;</a>
+    </div>
+  </section>
+  <div id="Lightbox" class="modal">
+    <div class="modal-content">
+                 <span class="close pointer" onclick="closeLightbox()">
+                    <img src="" alt="" srcset="assets/images/svg/close.svg">
+                 </span>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="swiperWrapper">
+          <div class="swiper-slide first" >
+            <img src="" id="initialSlide">
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <section class="first-section">
+    <div class="about-us-wrapper">
+      <h1 class="title"> Image Gallery </h1>
+      <p class="desc">This is a collection of visual content organized and presented in a structured manner, typically within a digital environment such as a website or application.</p>
+    </div>
+    <div class="footer-menu">
+      <h1 class="title"> Photos </h1>
+      <nav class="footer-nav">
+        <a href="index.html">Pets</a>
+        <a href="food.html">Food</a>
+        <a href="wildlife.html">Wildlife</a>
+        <a href="cars.html">Cars</a>
+        <a href="travel.html">Travel</a>
+        <a class="active" href="fashion.html">Fashion</a>
+        <a href="sports.html">Sports</a>
+      </nav>
+    </div>
+    <div class="social-media-wrapper">
+      <h1 class="title"> Contact Us </h1>
+      <div class="office-location">
+        <a href="cars.html">555-123-4567</a>
+        <a href="food.html">1234 Elm Street, Springfield, USA</a>
+      </div>
+    </div>
+  </section>
+  <div class="copyright-section">
+    <p class="copyright"> Copyright 2024 Chan. All rights reserved. </p>
+  </div>
+</footer>
+</body>
+<script src="assets/js/common.js?v=1.0.5"></script>
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  let page = urlParams.get('page')
+
+  if(!page) {
+    page = 1
+  }
+  loadPhotos('food', page); // load photos
+
+  // pagination dom manipulation
+  let prevPage = page - 1;
+  if (prevPage < 1) {
+    prevPage = 1;
+  }
+  let nextPage = +page + 1;
+  if(nextPage > 2) {
+      nextPage = 2
+  }
+  document.getElementById(`page${page}`).classList.add('active')
+  document.getElementById("prev").href= `fashion.html?page=${prevPage}`;
+  document.getElementById("next").href= `fashion.html?page=${nextPage}`;
+
+  (function() {
+    document.getElementById("loaderWrapper").classList.add("loaded");
+  })();
+
+</script>
+
+</html>

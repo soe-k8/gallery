@@ -1,0 +1,6 @@
+# Editor directories and files
+.vscode
+.env
+.vscode/*
+.idea
+redeploy-app.sh
