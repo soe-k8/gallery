@@ -113,11 +113,19 @@ async function loadPhotos(filename, page = 1) {
 
 async function filterPhoto () {
     const host = window.location.href
-    let fileName = 'https://mocki.io/v1/24ca4755-1351-442b-996b-bd1083a73e08';
+    let fileName = '../assets/data/pets.json';
     if(host.includes("food.html")) {
-        fileName = 'https://mocki.io/v1/e2cd5b7c-4dcd-457d-b269-a70b0df67a24'
+        fileName = '../assets/data/food.json'
+    } else if(host.includes("cars.html")) {
+        fileName = '../assets/data/cars.json'
+    } else if(host.includes("fashion.html")) {
+        fileName = '../assets/data/fashion.json'
+    } else if(host.includes("sports.html")) {
+        fileName = '../assets/data/sports.json'
+    } else if(host.includes("travel.html")) {
+        fileName = '../assets/data/travel.json'
     } else if(host.includes("wildlife.html")) {
-        fileName = 'https://mocki.io/v1/bcc9b8fc-2b8f-4e8a-9036-1b8b281aaaa0'
+        fileName = '../assets/data/wildlife.json'
     }
     const photoName = document.getElementById("photo").value;
     const response = await fetch(fileName);
@@ -133,7 +141,7 @@ async function filterPhoto () {
 function showMenu () {
     const navMenu = document.getElementById("navMenu");
     // const menuHamburger = document.getElementById("menuHamburger");
-    navMenu.classList.toggle("show-menu");
+    navMenu.classList.toggle("sfhow-menu");
     // menuHamburger.classList.toggle("open-menu");
 }
 
