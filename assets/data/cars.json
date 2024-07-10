@@ -42,34 +42,34 @@
   {
     "id": 6,
     "title": "Hello World",
-    "name": "sushi",
+    "name": "pexels-charles-kettor-268979-831475",
     "date": "2023-11-20 12:28:21",
     "view_count": 1000,
-    "img": "assets/images/cars/pexels-photo-357756.jpeg"
+    "img": "assets/images/cars/pexels-charles-kettor-268979-831475.jpg"
   },
   {
     "id": 7,
     "title": "Hello World",
-    "name": "salad",
+    "name": "pexels-charles-kettor-268979-1077785",
     "date": "2023-11-20 12:28:21",
     "view_count": 1000,
-    "img": "assets/images/food/pexels-photo-61180.jpeg"
+    "img": "assets/images/cars/pexels-charles-kettor-268979-1077785.jpg"
   },
   {
     "id": 8,
     "title": "Hello World",
-    "name": "pasta",
+    "name": "pexels-dom-j-7304-303316",
     "date": "2023-11-20 12:28:21",
     "view_count": 1000,
-    "img": "assets/images/food/pexels-photo-1279330.jpeg"
+    "img": "assets/images/food/pexels-dom-j-7304-303316.jpg"
   },
   {
     "id": 9,
     "title": "Hello World",
-    "name": "stake",
+    "name": "pexels-ellis-1210622",
     "date": "2023-11-20 12:28:21",
     "view_count": 1000,
-    "img": "assets/images/food/pexels-photo-1639563.webp"
+    "img": "assets/images/food/pexels-ellis-1210622.jpg"
   },
   {
     "id": 10,
