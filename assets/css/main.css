@@ -1,3 +1,9 @@
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
+}
 /* start general setting */
 a {
     text-decoration: none;

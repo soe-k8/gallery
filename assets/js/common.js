@@ -172,16 +172,53 @@ function closeLightbox () {
 
 const Photoinput = document.getElementById("photo");
 // Execute a function when the user presses a key on the keyboard
-Photoinput.addEventListener("keypress", function(event) {
-    // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter") {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        filterPhoto ()
-    }
-});
+if(Photoinput) {
+    Photoinput.addEventListener("keypress", function(event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            filterPhoto ()
+        }
+    });
+}
 
+function logout() {
+    alert('logout')
+    window.localStorage.removeItem("jwt");
+    window.location.replace("login.html");
+}
+
+
+
+const jwt = window.localStorage.getItem('jwt');
+console.log("jwt", jwt);
+const collection = document.getElementsByClassName("loggedinItem");
+const collection2 = document.getElementsByClassName("notLoggedinItem");
+if (jwt) {
+    for(let i = 0; i < collection.length; i++)
+    {
+        collection[i].classList.remove('hidden');
+        console.log(collection[i].className);
+    }
+    for(let j = 0; j < collection2.length; j++)
+    {
+        collection2[j].classList.add('hidden');
+        console.log(collection2[j].className);
+    }
+} else {
+    for(let i = 0; i < collection.length; i++)
+    {
+        collection[i].classList.add('hidden');
+        console.log(collection[i].className);
+    }
+    for(let j = 0; j < collection2.length; j++)
+    {
+        collection2[j].classList.remove('hidden');
+        console.log(collection2[j].className);
+    }
+}
 function lazyload () {
     /** for lazy loading **/
     const lazyImages = document.querySelectorAll('.lazy-loading-img');

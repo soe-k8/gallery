@@ -60,7 +60,16 @@ button:hover {
     clear: both;
     display: table;
 }
-
+.red,
+.green {
+    font-size: 20px;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {

@@ -28,7 +28,7 @@
   <meta name="twitter:title" content="ASerenity in Nature: A Photographic Journey" />
   <meta name="twitter:description" content="This is a collection of visual content organized and presented in a structured manner, typically within a digital environment such as a website or application." />
   <meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
-  <link rel="stylesheet" href="assets/css/main.css?v=1.0.4">
+  <link rel="stylesheet" href="assets/css/main.css?v=1.0.6">
   <link rel="stylesheet" href="assets/css/responsive.css?v=1.0.4">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer> </script>
@@ -50,14 +50,15 @@
   <div><img class="logo" src="assets/images/logos/main-logo.png" alt="" srcset=""></div>
   <nav class="desktop-nav" id="navMenu">
     <a href="index.html">Pets</a>
-    <a href="food.html">Food</a>
-    <a href="wildlife.html">Wildlife</a>
-    <a href="travel.html">Travel</a>
-    <a href="cars.html">Cars</a>
-    <a href="fashion.html">Fashion</a>
+    <a href="food.html" class="hidden loggedinItem">Food</a>
+    <a href="wildlife.html" class="hidden loggedinItem">Wildlife</a>
+    <a href="travel.html" class="hidden loggedinItem">Travel</a>
+    <a href="cars.html" class="hidden loggedinItem">Cars</a>
+    <a href="fashion.html" class="hidden loggedinItem">Fashion</a>
     <a class="active" href="sports.html">Sports</a>
-    <a href="sign-up.html">Sign Up</a>
-    <a href="login.html">Login</a>
+    <a href="register.html" class="notLoggedinItem">Sign Up</a>
+    <a href="login.html" class="notLoggedinItem">Login</a>
+    <a href="login.html" class="hidden loggedinItem" onclick="logout()">Logout</a>
   </nav>
   <span class="menu-wrapper" onclick="showMenu()">
           <img class="menu" src="assets/images/svg/menu.svg">
@@ -127,14 +128,15 @@
       <h1 class="title"> Photos </h1>
       <nav class="footer-nav">
         <a href="index.html">Pets</a>
-        <a href="food.html">Food</a>
-        <a href="wildlife.html">Wildlife</a>
-        <a href="cars.html">Cars</a>
-        <a href="travel.html">Travel</a>
-        <a href="fashion.html">Fashion</a>
+        <a href="food.html" class="hidden loggedinItem">Food</a>
+        <a href="wildlife.html" class="hidden loggedinItem">Wildlife</a>
+        <a href="cars.html" class="hidden loggedinItem">Cars</a>
+        <a href="travel.html" class="hidden loggedinItem">Travel</a>
+        <a href="fashion.html" class="hidden loggedinItem">Fashion</a>
         <a class="active" href="sports.html">Sports</a>
-        <a href="sign-up.html">Sign Up</a>
-        <a href="login.html">Login</a>
+        <a href="register.html" class="notLoggedinItem">Sign Up</a>
+        <a href="login.html" class="notLoggedinItem">Login</a>
+        <a href="login.html" class="hidden loggedinItem" onclick="logout()">Logout</a>
       </nav>
     </div>
     <div class="social-media-wrapper">
@@ -150,7 +152,7 @@
   </div>
 </footer>
 </body>
-<script src="assets/js/common.js?v=1.0.0"></script>
+<script src="assets/js/common.js?v=1.0.1"></script>
 <script>
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
