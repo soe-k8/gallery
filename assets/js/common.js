@@ -185,8 +185,8 @@ if(Photoinput) {
 }
 
 function logout() {
-    alert('logout')
     window.localStorage.removeItem("jwt");
+    window.localStorage.removeItem("userData");
     window.location.replace("login.html");
 }
 
