@@ -13,8 +13,8 @@ function createGallery (data, feature = 'initial_load') {
         const h2 = document.createElement("h2");
         h2.setAttribute('class', 'sub-title')
         h2.innerHTML = value.name
-        const imgSrc = `https://uats.site/${value.img}`
-        const imgSrcSet = `https://uats.site/${value.img}?w=320&auto=format%2Ccompress 1x, https://uats.site/${value.img}?w=640&auto=format%2Ccompress 2x`
+        const imgSrc = `https://demo.k8team.top/${value.img}`
+        const imgSrcSet = `https://demo.k8team.top/${value.img}?w=320&auto=format%2Ccompress 1x, https://demo.k8team.top/${value.img}?w=640&auto=format%2Ccompress 2x`
         if(feature === 'search') {
             img.setAttribute("src", imgSrc);
             img.setAttribute("srcset", imgSrcSet);
@@ -69,8 +69,8 @@ function createSlider (data) {
         const img = document.createElement("img");
         img.setAttribute("alt", value.name);
         img.setAttribute("class", 'lazy-loading-img');
-        const imgSrc = `https://uats.site/${value.img}`
-        const imgSrcSet = `https://uats.site/${value.img}?w=320&auto=format%2Ccompress 1x, https://uats.site/${value.img}?w=640&auto=format%2Ccompress 2x`
+        const imgSrc = `https://demo.k8team.top/${value.img}`
+        const imgSrcSet = `https://demo.k8team.top/${value.img}?w=320&auto=format%2Ccompress 1x, https://demo.k8team.top/${value.img}?w=640&auto=format%2Ccompress 2x`
         img.setAttribute("data-src", imgSrc);
         img.setAttribute("data-srcset", imgSrcSet);
         swiperSlide.appendChild(img);
@@ -147,8 +147,8 @@ function showMenu () {
 
 function openLightbox (img) {
     const overlayImg = document.getElementById('overLayImg');
-    const imgSrc = `https://uats.site/${img}`
-    const imgSrcSet = `https://uats.site/${img}?w=320&auto=format%2Ccompress 1x, https://uats.site/${img}?w=640&auto=format%2Ccompress 2x`
+    const imgSrc = `https://demo.k8team.top/${img}`
+    const imgSrcSet = `https://demo.k8team.top/${img}?w=320&auto=format%2Ccompress 1x, https://demo.k8team.top/${img}?w=640&auto=format%2Ccompress 2x`
     overlayImg.setAttribute('src', imgSrc)
     overlayImg.setAttribute('srcset', imgSrcSet)
     new Swiper('.swiper', {
